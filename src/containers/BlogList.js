@@ -43,14 +43,14 @@ export default class BlogList extends React.Component{
             <div>
                 <h3>Blog List</h3>
                 <hr/>
-                <div className="row">
+                <div className="row" style={{marginBottom: "10px"}}>
                     <div className="col-sm-12 col-md-8 col-lg-8">
-                        <input className="form-control" placeholder="Search"/>
+                        <input className="form-control" placeholder="New Blog Name"/>
                     </div>
                     <div className="col-sm-12 col-md-4 col-lg-4">
-                        <button type="button" className="form-control">
-                            New
-                        </button>
+                        <span >
+                            <i className="fa fa-plus-circle fa-2x" style={{color:"blue"}}/>
+                        </span>
                     </div>
 
                 </div>
