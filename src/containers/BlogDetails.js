@@ -26,11 +26,8 @@ export default class BlogDetails extends React.Component{
     render() {
         return (
                 <div>
-                    <h3>Blog Details</h3>
-                    <div className="row">
-                        {this.state.blog.name}
-                        {/*{this.state.blog.name}*/}
-                    </div>
+                    <h3>{this.state.blog.name}</h3>
+                    <p>{this.state.blog.description}</p>
                 </div>
 
         )

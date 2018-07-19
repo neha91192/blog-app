@@ -54,19 +54,25 @@ export default class BlogList extends React.Component{
     render() {
         return (
             <div>
-                <h3>Blog List</h3>
+                <h4 style={{paddingTop: "10px"}}>All Blogs</h4>
                 <hr/>
                 <div className="row" style={{marginBottom: "10px"}}>
-                    <div className="col-sm-12 col-md-8 col-lg-8">
-                        <input className="form-control" placeholder="Search"/>
+                    <div className="col-sm-12 col-md-6 col-lg-8 input-group">
+                        <input  type="text" className="form-control" placeholder="Search"/>
+                        <div className="input-group-append">
+                            <span className="input-group-text"><i className="fa fa-search"></i></span>
+                        </div>
+
                     </div>
                     <div className="col-sm-12 col-md-4 col-lg-4">
-                        <Link to ={'/add/'}>
-                            <i className="fa fa-plus-circle fa-2x" style={{color:"blue"}}/>
+                        <Link to ={'/new'}>
+                            <button type="button" className="btn btn-outline-secondary">
+                                <i className="fa fa-plus"/> New</button>
                         </Link>
                     </div>
 
                 </div>
+
                 <ul className="list-group">
                     {this.renderBlogs()}
                 </ul>
