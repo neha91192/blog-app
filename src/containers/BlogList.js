@@ -22,7 +22,7 @@ export default class BlogList extends React.Component{
     }
 
     componentWillReceiveProps(){
-
+        this.findAllBlogs();
     }
 
     findAllBlogs(){

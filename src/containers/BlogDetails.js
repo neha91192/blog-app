@@ -27,7 +27,7 @@ export default class BlogDetails extends React.Component{
         return (
                 <div>
                     <h3>{this.state.blog.name}</h3>
-                    <p>{this.state.blog.description}</p>
+                    <p>{this.state.blog.content}</p>
                 </div>
 
         )

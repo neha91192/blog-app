@@ -6,9 +6,10 @@ export default class BlogAdd extends React.Component {
         super(props)
         this.blogService = BlogServiceClient.instance;
         this.state = {
-            blogName: '',
-            blogDescription: '',
-            blogContent: ''
+            name: '',
+            description: '',
+            content: '',
+            text: ''
         }
         this.textChange = this.textChange.bind(this);
         this.addBlog = this.addBlog.bind(this);
@@ -33,14 +34,19 @@ export default class BlogAdd extends React.Component {
 
     addBlog() {
         let blog = {
-            name: this.state.blogName,
-            blogDescription: this.state.blogDescription,
-            blogContent: this.state.blogContent
+            name: this.state.name,
+            description: this.state.description,
+            content: this.state.content,
+
         }
-        if(this.state.blogName)
+        if(this.state.name)
         {
             this.blogService.addBlog(blog)
-                .then(blog =>  this.props.history.push(`/blog/`+blog.id))
+                .then(blog =>  {
+                        this.props.history.push(`/`);
+                        alert('Saved Successfully')
+                    }
+                );
         }
     }
 
