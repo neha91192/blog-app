@@ -17,7 +17,7 @@ export default class BlogApp extends React.Component {
                     <div className="container-fluid" style={{marginTop:"10px"}}>
                         <div className="row">
                             <div className="col-sm-12 col-md-3 col-lg-3 border">
-                                <Route path="/" component={BlogList} />
+                                <BlogList/>
                             </div>
                             <div className="col-sm-12 col-md-9 col-lg-9">
                                 <Route path="/blog/:blogId/" component={BlogDetails} />
