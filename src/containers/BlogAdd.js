@@ -34,8 +34,8 @@ export default class BlogAdd extends React.Component {
     addBlog() {
         let blog = {
             name: this.state.blogName,
-            blogDescription: this.state.blogDescription,
-            blogContent: this.state.blogContent
+            description: this.state.blogDescription,
+            text: this.state.blogContent
         }
         if(this.state.blogName)
         {

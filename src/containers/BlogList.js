@@ -22,7 +22,7 @@ export default class BlogList extends React.Component{
     }
 
     componentWillReceiveProps(){
-
+        this.findAllBlogs();
     }
 
     findAllBlogs(){
@@ -64,7 +64,7 @@ export default class BlogList extends React.Component{
                         </div>
                     </div>
                     <div className="col-sm-12 col-md-12 col-lg-4" style={{padding: "8px"}}>
-                        <Link to ={'/new'}>
+                        <Link to ={'/blog/new'}>
                             <button type="button" className="btn btn-outline-secondary">
                                 <i className="fa fa-plus"/> New</button>
                         </Link>
