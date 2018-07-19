@@ -2,7 +2,7 @@ let _singleton = Symbol();
 
 class BlogServiceClient {
 
-    BLOG_URL = "http://localhost:8080/api/blog";
+    BLOG_URL = "https://simpleblogappdemo.herokuapp.com/api/blog";
     constructor(singletonToken) {
         if (_singleton !== singletonToken)
             throw new Error('Cannot instantiate directly.');
