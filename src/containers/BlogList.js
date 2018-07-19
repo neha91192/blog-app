@@ -1,20 +1,19 @@
 import React from 'react';
 import BlogRow from "../components/BlogRow";
 import BlogServiceClient from "../services/BlogServiceClient";
-
+import { Link } from 'react-router-dom'
 
 export default class BlogList extends React.Component{
 
     constructor(props) {
         super(props)
         this.state = {
-            blogList: [],
-            blogName: ''
+            blogList: []
         }
         this.blogService = BlogServiceClient.instance;
         this.renderBlogs = this.renderBlogs.bind(this);
-        this.editBlgName = this.editBlgName.bind(this);
-        this.addBlog = this.addBlog.bind(this);
+        // this.editBlgName = this.editBlgName.bind(this);
+        // this.addBlog = this.addBlog.bind(this);
         this.findAllBlogs= this.findAllBlogs.bind(this);
     }
 
@@ -33,9 +32,9 @@ export default class BlogList extends React.Component{
                 this.setState({blogList})});
     }
 
-    editBlgName(blogName){
-        this.setState(blogName);
-    }
+    // editBlgName(blogName){
+    //     this.setState(blogName);
+    // }
 
     renderBlogs() {
         let blogs = this.state.blogList.map(blog => {
@@ -44,11 +43,13 @@ export default class BlogList extends React.Component{
 
         return blogs;
     }
-    addBlog(){
-        this.blogService.addBlog({name: this.state.blogName})
-            .then(res => this.findAllBlogs())
-            .then(this.setState({blogname: ''}))
-    }
+    // addBlog(){
+    //     if(this.state.blogName) {
+    //         this.blogService.addBlog({name: this.state.blogName})
+    //             .then(res => this.findAllBlogs())
+    //             .then(this.setState({blogname: ''}))
+    //     }
+    // }
 
     render() {
         return (
@@ -57,13 +58,12 @@ export default class BlogList extends React.Component{
                 <hr/>
                 <div className="row" style={{marginBottom: "10px"}}>
                     <div className="col-sm-12 col-md-8 col-lg-8">
-                        <input className="form-control" placeholder="New Blog Name"
-                        onChange={event => this.editBlgName({blogName:event.target.value})}/>
+                        <input className="form-control" placeholder="Search"/>
                     </div>
                     <div className="col-sm-12 col-md-4 col-lg-4">
-                        <span onClick={this.addBlog}>
+                        <Link to ={'/add/'}>
                             <i className="fa fa-plus-circle fa-2x" style={{color:"blue"}}/>
-                        </span>
+                        </Link>
                     </div>
 
                 </div>

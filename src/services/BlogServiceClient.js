@@ -19,6 +19,11 @@ class BlogServiceClient {
             .then(response => response.json());
     }
 
+    findBlogById(blogId) {
+        return fetch(this.BLOG_URL+ '/' + blogId)
+            .then(response => response.json());
+    }
+
     addBlog(blog)
     {
         return fetch(this.BLOG_URL, {

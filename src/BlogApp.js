@@ -2,6 +2,7 @@ import React from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import BlogList from "./containers/BlogList";
 import BlogDetails from "./containers/BlogDetails";
+import BlogAdd from "./containers/BlogAdd";
 
 export default class BlogApp extends React.Component {
     render() {
@@ -19,7 +20,8 @@ export default class BlogApp extends React.Component {
                                 <Route path="/" component={BlogList} />
                             </div>
                             <div className="col-sm-12 col-md-9 col-lg-9">
-                                <Route path="/:blogId/" component={BlogDetails} />
+                                <Route path="/blog/:blogId/" component={BlogDetails} />
+                                <Route path="/add/" component={BlogAdd} />
                             </div>
                         </div>
                     </div>
