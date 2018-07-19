@@ -61,9 +61,9 @@ export default class BlogList extends React.Component{
                         <input className="form-control" placeholder="Search"/>
                     </div>
                     <div className="col-sm-12 col-md-4 col-lg-4">
-                        <Link to ={'/add/'}>
+                        <span onClick={() => this.props.blogAdd()}>
                             <i className="fa fa-plus-circle fa-2x" style={{color:"blue"}}/>
-                        </Link>
+                        </span>
                     </div>
 
                 </div>
