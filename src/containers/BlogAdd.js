@@ -23,13 +23,13 @@ export default class BlogAdd extends React.Component {
         let blog = {
             name: this.state.name,
             description: this.state.description,
-            content: this.state.content,
+            text: this.state.text,
 
         }
         if(this.state.name) {
             this.blogService.addBlog(blog)
                 .then(blog =>  {
-                        this.props.history.push(`/`);
+                        this.props.history.push(`/blog/${blog.id}`);
                         alert('Saved Successfully')
                     }
                 );
@@ -47,7 +47,7 @@ export default class BlogAdd extends React.Component {
                     </div>
                     <div className="col-sm-12 col-md-10 col-lg-10">
                         <input type="text" className="form-control" id="name" placeholder="Blog Name"
-                               onChange={event => this.textChange({blogName: event.target.value})}/>
+                               onChange={event => this.textChange({name: event.target.value})}/>
                     </div>
                 </div>
 
@@ -58,7 +58,7 @@ export default class BlogAdd extends React.Component {
                     </div>
                     <div className="col-sm-12 col-md-10 col-lg-10">
                         <input type="text" className="form-control" id="description" placeholder="Blog Description"
-                               onChange={event => this.textChange({blogDescription: event.target.value})}/>
+                               onChange={event => this.textChange({description: event.target.value})}/>
                     </div>
                 </div>
 
@@ -71,7 +71,7 @@ export default class BlogAdd extends React.Component {
                     <div className="col-sm-12 col-md-12 col-lg-12">
                               <textarea cols="8" rows="8" className="form-control" id="content"
                                         placeholder="Start writing"
-                                        onChange={event => this.textChange({blogContent: event.target.value})}/>
+                                        onChange={event => this.textChange({text: event.target.value})}/>
                     </div>
                 </div>
 

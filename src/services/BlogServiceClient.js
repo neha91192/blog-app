@@ -37,5 +37,11 @@ class BlogServiceClient {
                 return response.json();
             })
     }
+
+    deleteBlog(blogId) {
+        return fetch(this.BLOG_URL + '/' + blogId, {
+            method: 'DELETE'
+        })
+    }
 }
 export default BlogServiceClient;

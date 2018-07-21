@@ -14,7 +14,7 @@ export default class BlogContainer extends React.Component {
                                 <BlogList/>
                             </div>
                             <div className="col-sm-12 col-md-9 col-lg-9">
-                                <Route path="/blog/:blogId/" component={BlogDetails} />
+                                <Route path="/blog/:blogId" component={BlogDetails} />
                                 <Route path="/blog/new" component={BlogAdd} />
                             </div>
                         </div>
