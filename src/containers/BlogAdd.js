@@ -15,19 +15,6 @@ export default class BlogAdd extends React.Component {
         this.addBlog = this.addBlog.bind(this);
 
     }
-
-    // componentDidMount(){
-    //     this.findBlogDetails( this.props.match.params.blogId);
-    // }
-    //
-    // componentWillReceiveProps(newProps){
-    //     this.findBlogDetails( newProps.match.params.blogId);
-    // }
-    // findBlogDetails(blogId){
-    //     this.setState({blogId});
-    //     this.blogService.findBlogById(blogId)
-    //         .then(blog =>  this.setState({blog: blog}));
-    // }
     textChange(text) {
         this.setState(text);
     }
@@ -39,8 +26,7 @@ export default class BlogAdd extends React.Component {
             content: this.state.content,
 
         }
-        if(this.state.name)
-        {
+        if(this.state.name) {
             this.blogService.addBlog(blog)
                 .then(blog =>  {
                         this.props.history.push(`/`);
