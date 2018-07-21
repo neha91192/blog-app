@@ -32,8 +32,7 @@ class BlogServiceClient {
                 'Content-Type': 'application/json'
             },
             method: 'POST'
-        })
-            .then(function (response) {
+        }).then(function (response) {
                 return response.json();
             })
     }
@@ -41,6 +40,18 @@ class BlogServiceClient {
     deleteBlog(blogId) {
         return fetch(this.BLOG_URL + '/' + blogId, {
             method: 'DELETE'
+        })
+    }
+
+    updateBlog(blog) {
+        return fetch(this.BLOG_URL, {
+            body: JSON.stringify(blog),
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            method: 'PUT'
+        }).then(function (response) {
+            return response.json();
         })
     }
 }
