@@ -1,6 +1,6 @@
 let _singleton = Symbol();
 
-class BlogServiceClient {
+class BlogPostServiceClient {
 
     BLOG_URL = "https://simpleblogappdemo.herokuapp.com/api/blog";
     constructor(singletonToken) {
@@ -10,7 +10,7 @@ class BlogServiceClient {
 
     static get instance() {
         if(!this[_singleton])
-            this[_singleton] = new BlogServiceClient(_singleton);
+            this[_singleton] = new BlogPostServiceClient(_singleton);
         return this[_singleton]
     }
 
@@ -55,4 +55,4 @@ class BlogServiceClient {
         })
     }
 }
-export default BlogServiceClient;
+export default BlogPostServiceClient;

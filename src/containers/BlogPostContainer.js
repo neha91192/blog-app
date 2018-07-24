@@ -1,21 +1,21 @@
 import React from 'react';
 import {Route} from 'react-router-dom';
-import BlogList from "./BlogList";
-import BlogDetails from "./BlogDetails";
-import BlogAdd from "./BlogAdd";
+import BlogPostList from "./BlogPostList";
+import BlogPostDetails from "./BlogPostDetails";
+import BlogPostCreateForm from "./BlogPostCreateForm";
 
-export default class BlogContainer extends React.Component {
+export default class BlogPostContainer extends React.Component {
     render() {
         return (
                 <div>
                     <div className="container-fluid" style={{marginTop:"10px"}}>
                         <div className="row" style={{padding: "12px"}}>
                             <div className="col-sm-12 col-md-3 col-lg-3 border">
-                                <BlogList/>
+                                <BlogPostList/>
                             </div>
                             <div className="col-sm-12 col-md-9 col-lg-9">
-                                <Route path="/blog/:blogId" component={BlogDetails} />
-                                <Route path="/blog/new" component={BlogAdd} />
+                                <Route path="/blog/:blogId" component={BlogPostDetails} />
+                                <Route path="/blog/new" component={BlogPostCreateForm} />
                             </div>
                         </div>
                     </div>

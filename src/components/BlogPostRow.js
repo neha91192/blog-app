@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
-export default class BlogRow extends React.Component {
+export default class BlogPostRow extends React.Component {
     // constructor(props) {
     //     super(props)
     // }

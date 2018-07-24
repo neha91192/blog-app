@@ -1,8 +1,8 @@
 import React from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
-import BlogContainer from "./containers/BlogContainer";
+import BlogPostContainer from "./containers/BlogPostContainer";
 
-export default class BlogApp extends React.Component {
+export default class BlogPostApp extends React.Component {
     render() {
         return (
             <Router>
@@ -11,7 +11,7 @@ export default class BlogApp extends React.Component {
                         <a className="navbar-brand"
                            style={{color:'white', fontSize:"22px"}}>Blog Application</a>
                     </nav>
-                    <Route path="/blog/" component={BlogContainer} />
+                    <Route path="/blog/" component={BlogPostContainer} />
                 </div>
             </Router>
         )

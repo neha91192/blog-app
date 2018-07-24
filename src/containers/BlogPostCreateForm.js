@@ -1,10 +1,10 @@
 import React from 'react';
-import BlogServiceClient from "../services/BlogServiceClient";
+import BlogPostServiceClient from "../services/BlogPostServiceClient";
 
-export default class BlogAdd extends React.Component {
+export default class BlogPostCreateForm extends React.Component {
     constructor(props) {
         super(props)
-        this.blogService = BlogServiceClient.instance;
+        this.blogService = BlogPostServiceClient.instance;
         this.state = {
             name: '',
             description: '',

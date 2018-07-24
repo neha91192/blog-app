@@ -1,10 +1,10 @@
 import React from 'react';
-import BlogServiceClient from "../services/BlogServiceClient";
+import BlogPostServiceClient from "../services/BlogPostServiceClient";
 
-export default class BlogDetails extends React.Component {
+export default class BlogPostDetails extends React.Component {
     constructor(props) {
         super(props)
-        this.blogService = BlogServiceClient.instance;
+        this.blogService = BlogPostServiceClient.instance;
         this.state = {
             blogId: '',
             name: '',
@@ -26,6 +26,7 @@ export default class BlogDetails extends React.Component {
     }
 
     componentWillReceiveProps(newProps) {
+        this.setState({editMode: false});
         this.findBlogDetails(newProps.match.params.blogId);
     }
 
