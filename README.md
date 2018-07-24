@@ -1,1 +1,1 @@
-(Heroku link)[https://blog-app-summer2.herokuapp.com]
+[Heroku link](https://blog-app-summer2.herokuapp.com)
