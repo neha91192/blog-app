@@ -43,7 +43,7 @@ export default class BlogPostCreateForm extends React.Component {
                 <div className="form-group row" style={{padding: '8px'}}>
                     <div className="col-sm-12 col-md-2 col-lg-2">
                         <label htmlFor="name" className="text-dark"
-                               style={{fontSize: '18px'}}>Blog Name</label>
+                               style={{fontSize: '18px'}}>Blog Title</label>
                     </div>
                     <div className="col-sm-12 col-md-10 col-lg-10">
                         <input type="text" className="form-control" id="name" placeholder="Blog Name"

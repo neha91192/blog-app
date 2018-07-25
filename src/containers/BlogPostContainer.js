@@ -7,7 +7,6 @@ import BlogPostCreateForm from "./BlogPostCreateForm";
 export default class BlogPostContainer extends React.Component {
     render() {
         return (
-                <div>
                     <div className="container-fluid" style={{marginTop:"10px"}}>
                         <div className="row" style={{padding: "12px"}}>
                             <div className="col-sm-12 col-md-3 col-lg-3 border">
@@ -19,7 +18,6 @@ export default class BlogPostContainer extends React.Component {
                             </div>
                         </div>
                     </div>
-                </div>
         )
     }
 }
